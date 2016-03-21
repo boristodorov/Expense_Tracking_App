@@ -13,7 +13,7 @@
             </tr>
            <?php   
            /*
-            * Da bi smo izvrsili vizualizaciju podataka iz fajla data.txt, prvo moramo da proverimo 
+            * Da bismo izvrsili vizualizaciju podataka iz fajla data.txt, prvo moramo da proverimo 
             * dali takav falj postoji, 
             */
             if (file_exists('data.txt')){ 
@@ -40,7 +40,11 @@
                           <td>'.$groups[trim($coloms[2])].'</td>
                          </tr>';
                 }
-                
+                /*Nacin na koji dodajemo total sum, deklarisemo promenljivu $totalSum odmah nakon promenljive $coloms
+                 * i za svaku iteraciju koju izvrsi foreach dodajemo u $totalSum trenutnu vrednost promenljive i + $coloms sa elementom[1]
+                 * to je element niza koji sadrzi sumu.
+                 * 
+                 */
                 echo '<tr><td></td><td>'.$totalSum.'</td><td></td></tr>';
                 
             }
