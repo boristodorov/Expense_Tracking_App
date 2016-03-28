@@ -16,7 +16,7 @@
        $username = trim($_POST['username']);
        //funkcija srt_replace() prima tri parametra, tazeni simbol , simbol sa kojim menajmo trazeni sibol i treci gde trazimo taj sibol
        $username = str_replace('!', '', $username);
-       $sum = (float) $_POST['sum'];
+       $sum = (float) str_replace(',', '.', $_POST['sum']);
        $selectedGroup = (int)$_POST['groupe'];
        
        //deklarisemo promenljivu $error i dajemo vrednost false, nakon toga u if konstrukciji ako imamo neku gresku dajemo vrednost true
